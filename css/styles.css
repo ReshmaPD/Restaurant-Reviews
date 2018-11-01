@@ -54,6 +54,9 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+  display: flex;
+  align-items: center;
+
 }
 nav h1 {
   margin: auto;
@@ -98,6 +101,9 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+/* #map-container {
+  display: flex;
+} */
 #map {
   height: 400px;
   width: 100%;
@@ -109,6 +115,9 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+  display:flex;
+  flex-flow:nowrap;
+  justify-content:center;
 }
 .filter-options h2 {
   color: white;
@@ -116,6 +125,7 @@ nav h1 a {
   font-weight: normal;
   line-height: 1;
   margin: 0 20px;
+  /* order:-1; */
 }
 .filter-options select {
   background-color: white;
@@ -126,7 +136,9 @@ nav h1 a {
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  /* width: 200px; */
+  flex-basis: 200px;
+  /* order:2; */
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -136,6 +148,17 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content:flex-start;
+  /* justify-content:center; */
+
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  /* align-items: center; */
+  /* justify-content:space-around; */
+  /* good for small scrren size less than 700px
+  justify-content:space-evenly; */
 }
 #restaurants-list li {
   background-color: #fff;
@@ -145,7 +168,8 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  /* width: 270px; */
+  flex-basis: 270px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
