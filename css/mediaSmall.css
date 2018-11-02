@@ -1,5 +1,69 @@
 @charset "utf-8";
 @media only screen and (max-width: 480px)/* Narrow */
 {
+/* ======================Body ====================== */
+/* target whole outside body make it a flex conatiner */
+.outside {
+    display:flex;
+    flex-direction: column;
+}
+/* ====================== Header ====================== */
+nav {
+display:flex;
+justify-content:center;
+}
+
+/* #restaurants-content {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+} */
+/* ====================== Section====================== */
+.filter-options {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#restaurants-list {
+padding: 30px 15px;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-around;
+align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
