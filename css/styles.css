@@ -188,6 +188,8 @@ nav h1 a {
   top: 0;
   width: 100%;
   z-index: 1000;
+  /* display: flex;
+  flex-flow: row wrap; */
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -196,6 +198,9 @@ nav h1 a {
   right: 0;
   top: 80px;
   width: 50%;
+  z-index:999;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
 }
 .inside #map {
   background-color: #ccc;
