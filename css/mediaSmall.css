@@ -12,39 +12,44 @@
     display: flex;
     /* flex-direction: row; */
     flex-direction: column;
+    /* justify-content:space-around; */
+
     /* width: 100vw; */
     /* position: relative; */
     /* flex-wrap: wrap; */
-    align-items: flex-start;
-    /* align-items:center; */
+    /* align-items: flex-start; */
+    align-items:center;
     justify-content: flex-start;
 
 }
+/* .inside #maincontent {
+    order: 0;
+    margin: auto;
+    width: 100vw;
+} */
 /* ====================== Main====================== */
-#maincontent {
+/* DONT FLEX MAIN CONTENT */
+/* #maincontent {
     display: flex;
       flex-direction: column;
-      width: 100vw;
+      width: 100%;
       align-items: center;
-  }
+      min-height: 100%;
+  } */
 .inside header{
     order: 0;
     /* width:100vw; */
     width:100%;
 
 }
-.inside #maincontent {
-    order: 0;
-     /* display: flex;
-    flex-direction: column; */
+ /* .inside #maincontent { */
+     /* min-width: 0; */
+     /* padding: 0; */
     /* width: 100vw; */
-    /* position: relative; */
-    /* width: 100%; */
-}
- /* #maincontent  */
+/* } */
  .inside #map-container {
-    /* order: 1; */
-    order: 2;
+    order: 1;
+    /* order: 2; */
     /* flex-flow: column wrap; */
     top: 130px;
     position: relative;
@@ -52,47 +57,83 @@
     width: 100vw;
     width: 100%;
 }
+/* .inside #restaurant-container,
+#reviews-list {
+width: 100vw; */
 
-#maincontent #restaurant-container{
+ /* flex-basis: 75%; */
+/* } */
+.inside #restaurant-container {
     order: 2;
-    align-self: center;
+    flex-basis:100%;
+    flex-grow: 1;
 }
-#maincontent #reviews-container{
-    order: 3;
-    align-self: center;
+.inside #reviews-container {
+    order:3;
+    flex-basis:100%;
+    flex-grow: 1;
 }
-#restaurant-container{
+ #restaurant-container{
     display: flex;
+    /* flex-direction: row; */
     flex-direction: column;
-    /* width: 100%; */
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content:center; */
+    /* justify-content:space-around; */
+
+    /* padding: 140px 0 0 30px; */
+    margin: auto;
   }
-  #reviews-list li {
+  #restaurant-container #restaurant-name,
+  #restaurant-img,
+  #restaurant-cuisine,
+  #restaurant-address,
+  #restaurant-hours{
+flex-basis:100%;
+flex-grow:2;
+  }
+
+  /* #restaurant-hours {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+  } */
+  #reviews-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-direction: row; */
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  margin:auto;
   }
   .inside #footer {
-    /* position: relative; */
+      order:4;
       width: 87%;
-      /* padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px; */
   }
 
   #restaurants-list {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 30px 15px 40px 30px;
-		max-width: 90%;
-		padding: 0;
-margin: auto;
+		/* max-width: 90%; */
+        /* padding: 0; */
+        margin: auto;
   }
+  #reviews-list {
+      display: flex;
+      flex-flow: column;
+
+  }
+
 /* ====================== Header ====================== */
-nav {
+/* nav {
 display:flex;
 justify-content:center;
-}
+} */
  header{
     display: flex;
     flex-direction: column;
@@ -101,7 +142,7 @@ justify-content:center;
 header nav{
     order:0;
 }
-#breadcrumb {
+header #breadcrumb {
     order:1;
     /* width: 100vw; */
     width: 100%;
@@ -114,11 +155,12 @@ header nav{
 }
 /* ====================== Section====================== */
 /* ====================== Outside====================== */
-.filter-options {
+/* .filter-options {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-}
+     main goes
+} */
 
 #restaurants-list {
 padding: 30px 15px;
@@ -131,9 +173,9 @@ align-items: center;
 /* ====================== End Outside====================== */
 
 /* ====================== Inside============================ */
-.leaflet-control-zoom.leaflet-bar.leaflet-control {
-    margin-top: 5rem;
-  }
+/* .leaflet-control-zoom.leaflet-bar.leaflet-control {
+    margin-top: 3rem;
+  } */
 
 /* ====================== End Inside======================== */
 
