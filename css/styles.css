@@ -57,6 +57,8 @@ nav {
   text-align:center;
   /* flex it */
     display:flex;
+    flex-direction: row;
+    align-items: center;
     justify-content:center;
 }
 nav h1 {
@@ -154,7 +156,12 @@ label {
   padding: 30px 15px 60px;
   text-align: center;
   /* flex row wrap jusify center */
+  display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content:flex-start;
 }
+
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -230,6 +237,8 @@ label {
   position: absolute;
   /* width: 50%; */
   width: 45%;
+  /* width: 100%; */
+
 
 }
 #restaurant-name {
@@ -270,8 +279,8 @@ label {
   border-top: 1px solid #fff;
   /* padding: 140px 40px 30px; */
   /* width: 50%; */
-  width: 75%;
-  /* width: 45%; */
+  /* width: 75%; */
+  width: 45%;
 
   /* width: 100%; */
 
@@ -314,7 +323,7 @@ label {
   /* border-radius: 20px 0px 20px 0px; */
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;;
+  flex-wrap: wrap;
 }
 /* #reviews-list li p {
   margin: 0 0 10px;
