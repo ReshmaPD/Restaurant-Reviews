@@ -1,13 +1,20 @@
 @charset "utf-8";
-@media only screen and (max-width: 480px)/* Narrow */
+@media only screen and (max-width: 600px)/* Narrow */
 {
 /* ======================Body ====================== */
 /* target whole outside body make it a flex conatiner */
+
 .outside {
     display:flex;
     /* flex-direction: row; */
     flex-direction: column;
+    overflow-x: hidden;
+    /* width:100vw; */
 }
+/* .outside #restaurant-content {
+    flex: 2 1 auto;
+    align-content: space-around;
+} */
 .inside {
     display: flex;
     /* flex-direction: row; */
@@ -18,10 +25,25 @@
     /* position: relative; */
     /* flex-wrap: wrap; */
     /* align-items: flex-start; */
-    align-items:center;
+    /* align-items:center; EDITED FOR FOOTER IT LEAVES GAP */
     justify-content: flex-start;
+    /* BELOW IS ADDED TO HIDE HORIZONTAL SCROLL  */
+    overflow-x: hidden;
 
 }
+#restaurant-container,
+#reviews-container{
+    width: 100%;
+}
+/* #reviews-container {
+    width: 100%;
+} */
+#reviews-list li {
+    width:75%;
+}
+/* #restaurants-list {
+    width:100%;
+} */
 /* .inside #maincontent {
     order: 0;
     margin: auto;
@@ -79,20 +101,34 @@ width: 100vw; */
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content:center; */
+    /* align-items: flex-start; */
+    justify-content:center;
     /* justify-content:space-around; */
 
     /* padding: 140px 0 0 30px; */
     margin: auto;
   }
-  #restaurant-container #restaurant-name,
+  /* #restaurant-container #restaurant-name,
+  #restaurant-img,
+  #restaurant-cuisine {
+      align-self: center;
+  } */
+  #restaurant-container #restaurant-hours,
+  #restaurant-address{
+      align-self: flex-start;
+  }
+  #restaurant-hours,
+  #restaurant-address {
+      padding-left:28px;
+  }
+  /* #restaurant-container #restaurant-name,
   #restaurant-img,
   #restaurant-cuisine,
   #restaurant-address,
   #restaurant-hours{
 flex-basis:100%;
 flex-grow:2;
-  }
+  } */
 
   /* #restaurant-hours {
       display: flex;
@@ -110,8 +146,17 @@ flex-grow:2;
   }
   .inside #footer {
       order:4;
-      width: 87%;
+      align-self: center;
+
+     /* flex-basis:100% ; */
+     width: 100%;
+     /* flex: 2 0 100%; */
+     /* flex:0 1 87%; */
+     /* flex:0 1 auto; */
   }
+  /* #footer {
+      width:100%;
+  } */
 
   #restaurants-list {
       display: flex;
@@ -123,6 +168,9 @@ flex-grow:2;
         /* padding: 0; */
         margin: auto;
   }
+  /* #restaurants-list li {
+    flex:2 1 auto;
+  } */
   #reviews-list {
       display: flex;
       flex-flow: column;
@@ -169,6 +217,7 @@ flex-direction: column;
 flex-wrap: nowrap;
 justify-content: space-around;
 align-items: center;
+
 }
 /* ====================== End Outside====================== */
 
