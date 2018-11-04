@@ -1,0 +1,96 @@
+{
+    .inside header {
+        order: 0;
+        width: 100vw;
+      }
+      /* header {
+        display: flex;
+        flex-direction: column;
+      }
+      header nav {
+        order: 0;
+      } */
+    header #breadcrumb {
+        order: 1;
+    }
+    .inside #map-container {
+        order: 2;
+      }
+    .inside #restaurant-container {
+        order: 3;
+    }
+    .inside #reviews-container {
+        order: 4;
+    }
+    .inside #footer {
+        order: 5;
+    }
+    /* #restaurants-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    } */
+}
+.inside #map-container {
+	background: white none repeat scroll 0 0;
+   height: 50vh;
+	 padding: 0;
+	 margin: auto;
+	 justify-content: space-evenly;
+}
+.inside #map {
+	 background-color: #ccc;
+   height: 100%;
+   width: 100%;
+	 padding: 0;
+	 margin: auto;
+	 justify-content: space-evenly;
+}
+
+#restaurants-list {
+    display: flex;
+    flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px 15px 40px 30px;
+      max-width: 90%;
+      padding: 0;
+margin: auto;
+}
+/* #maincontent #restaurant-container{
+    order: 2;
+    align-self: center;
+}
+#maincontent #reviews-container{
+    order: 3;
+    align-self: center;
+} */
+.inside #footer {
+    /* position: relative; */
+      width: 87%;
+      /* padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px; */
+  }
+
+  @media only screen and (min-width: 1119px)and (max-width: 1275px)
+{
+    #restaurants-list {
+        /* display: flex; */
+      /* flex-direction: row; */
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+      }
+      #restaurants-list li {
+        /* width: 270px; */
+        width: 322px;
+
+        /* ADDED BY GUT ME */
+        /* flex: 1 1 270px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        /* align-items: center; */
+      }
+}
