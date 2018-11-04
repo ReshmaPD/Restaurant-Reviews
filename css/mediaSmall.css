@@ -64,6 +64,10 @@
     width:100%;
 
 }
+#breadcrumb li {
+    font-size: 10pt;
+}
+
  /* .inside #maincontent { */
      /* min-width: 0; */
      /* padding: 0; */
@@ -95,6 +99,12 @@ width: 100vw; */
     flex-basis:100%;
     flex-grow: 1;
 }
+#reviews-container {
+    padding: 30px 40px 80px;
+  }
+  #restaurant-container {
+    padding: 140px 0 40px 0;
+  }
  #restaurant-container{
     display: flex;
     /* flex-direction: row; */
@@ -147,7 +157,8 @@ flex-grow:2;
   .inside #footer {
       order:4;
       align-self: center;
-
+      bottom:0;
+     position: absolute;
      /* flex-basis:100% ; */
      width: 100%;
      /* flex: 2 0 100%; */
