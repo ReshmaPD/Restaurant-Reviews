@@ -1,0 +1,54 @@
+@charset "utf-8";
+@media only screen and (min-width: 601px) and (max-width: 960px)  /* Medium */
+{
+
+    #restaurants-list {
+        /* display: flex; */
+      /* flex-direction: row; */
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+      /* margin-left: 60px; */
+      /* margin-right: 60px; */
+      }
+      #restaurants-list li {
+        /* width: 270px; */
+        width: 350px;
+    /* ADDED BY GUT ME */
+        /* flex: 1 1 270px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        /* align-items: center; */
+      }
+}
+
+@media only screen and (min-width: 600px)
+{
+    .leaflet-control-zoom.leaflet-bar.leaflet-control {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (min-width: 1120px)and (max-width: 1276px)
+{
+    #restaurants-list {
+        /* display: flex; */
+      /* flex-direction: row; */
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+      }
+      #restaurants-list li {
+        /* width: 270px; */
+        width: 322px;
+
+        /* ADDED BY GUT ME */
+        /* flex: 1 1 270px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        /* align-items: center; */
+      }
+}
