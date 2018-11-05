@@ -1,25 +1,28 @@
 @charset "utf-8";
-@media only screen and (min-width: 601px) and (max-width: 960px)  /* Medium */
+@media only screen and (min-width: 601px) and (max-width: 1122px)  /* Medium */
 {
 
     #restaurants-list {
         /* display: flex; */
       /* flex-direction: row; */
       /* flex-wrap: wrap; */
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
+
       /* margin-left: 60px; */
       /* margin-right: 60px; */
       }
       #restaurants-list li {
         /* width: 270px; */
-        width: 350px;
+        /* width: 350px; */
     /* ADDED BY GUT ME */
         /* flex: 1 1 270px; */
         /* display: flex; */
         /* flex-direction: column; */
         /* flex-wrap: wrap; */
         justify-content: center;
+      /* flex: 1 1 auto; */
+
         /* align-items: center; */
       }
 }
@@ -75,6 +78,9 @@ label {
 {
 
    .leaflet-bottom {
-    margin-bottom:4em;
+    /* margin-bottom:4em;
+     */
+     top:0;
   }
 }
+
