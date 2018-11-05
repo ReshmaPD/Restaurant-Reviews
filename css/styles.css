@@ -235,7 +235,9 @@ justify-content:flex-start;
   z-index:999;
   /* display: flex; */
   /* flex-flow: row wrap; */
-  height: 80%;
+  /* height: 80%; */
+  height: 87%;
+
 
 }
 .inside #map {
@@ -251,6 +253,7 @@ justify-content:flex-start;
   /* width: 100%; */
   position: fixed;
   width: 100%;
+  z-index: 1000;
 
 }
 #restaurant-name {
@@ -371,5 +374,7 @@ justify-content:flex-start;
 }
 #restaurant-hours td {
   color: #666;
-  /* width: calc(100%-60px); */
+  font-size: 12pt;
+  width: calc(100% - 60px);
 }
+

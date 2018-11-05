@@ -217,6 +217,7 @@ header #breadcrumb {
 /* .filter-options {
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     align-items: center;
      main goes
 } */
@@ -240,8 +241,8 @@ align-items: center;
 /* ====================== End Inside======================== */
 
 
-/* ====================== End Section====================== */
 
+/* ====================== End Section====================== */
 
 
 

@@ -29,26 +29,52 @@
     .leaflet-control-zoom.leaflet-bar.leaflet-control {
     margin-top: 4rem;
   }
+  /* .leaflet-bottom {
+    margin-bottom:4em;
+  } */
 }
-@media only screen and (min-width: 1120px)and (max-width: 1276px)
-{
-    #restaurants-list {
-        /* display: flex; */
-      /* flex-direction: row; */
-      /* flex-wrap: wrap; */
-      justify-content: center;
-      align-items: center;
-      }
-      #restaurants-list li {
-        /* width: 270px; */
-        width: 322px;
 
-        /* ADDED BY GUT ME */
-        /* flex: 1 1 270px; */
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* flex-wrap: wrap; */
-        justify-content: center;
-        /* align-items: center; */
-      }
+@media only screen and (max-width: 459px)
+{
+
+.filter-options {
+  width: 100%;
+  height: 110px;
+  /* background-color: #3397DB; */
+  align-items: center;
+  /* flex it */
+  display: flex;
+  flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content:center;
+   padding-top: 12px;
+}
+/* .filter-options h2 {
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 20px;
+} */
+/* MR
+label {
+  visibility: hidden;
+} */
+
+.filter-options select {
+
+  height: 35px;
+  letter-spacing: 0;
+  margin: 10px;
+  padding: 0 10px;
+  width: 200px;
+}
+
+}
+@media only screen and (min-width: 1240px)
+{
+
+   .leaflet-bottom {
+    margin-bottom:4em;
+  }
 }
