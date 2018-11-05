@@ -22,7 +22,8 @@ initMap = () => {
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        mapboxToken: 'pk.eyJ1IjoicmF2ZW5iIiwiYSI6ImNqbnZkMHRpeTE5eDYzcXBqbDhwNXF5Z20ifQ.QumZTPDgwPABAZJxU_G_5Q',
+        // mapboxToken: 'pk.eyJ1IjoicmF2ZW5iIiwiYSI6ImNqbnZkMHRpeTE5eDYzcXBqbDhwNXF5Z20ifQ.QumZTPDgwPABAZJxU_G_5Q',
+        mapboxToken: SECRET.mapbox_key,
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -89,6 +90,12 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  //MODE ME
+  image.srcset = DBHelper.imageSrcsetForRestaurant(restaurant);
+  image.sizes = DBHelper.imageSizesForRestaurant(restaurant);
+  image.alt = DBHelper.imageAltForRestaurant(restaurant); //MOD GO adding attribute as per semantics
+  // image.alt = restaurant.name; MOD MCMR
+  // image.setAttribute('alt', 'An image of ' + restaurant.name); CG
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -174,6 +181,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.setAttribute('aria-current','page');//MOD MC
   breadcrumb.appendChild(li);
 }
 
