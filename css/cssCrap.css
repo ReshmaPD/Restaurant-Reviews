@@ -1,4 +1,4 @@
-{
+/* { */
     .inside header {
         order: 0;
         width: 100vw;
@@ -30,7 +30,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     } */
-}
+/* } */
 .inside #map-container {
 	background: white none repeat scroll 0 0;
    height: 50vh;
@@ -73,6 +73,58 @@ margin: auto;
   }
 
   @media only screen and (min-width: 1119px)and (max-width: 1275px)
+{
+    #restaurants-list {
+        /* display: flex; */
+      /* flex-direction: row; */
+      /* flex-wrap: wrap; */
+      justify-content: center;
+      align-items: center;
+      }
+      #restaurants-list li {
+        /* width: 270px; */
+        width: 322px;
+
+        /* ADDED BY GUT ME */
+        /* flex: 1 1 270px; */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        /* align-items: center; */
+      }
+}
+
+
+
+
+
+
+/* -------------GOSS------------ */
+@media screen and (min-width: 960px) {
+    #restaurants-list {
+      justify-content: flex-start;
+      padding: 30px 15px 60px 60px;
+    }
+
+    #restaurants-list li {
+      max-width: none;
+      width: calc(33.3% - 90px);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #restaurants-list {
+      padding: 30px 15px 60px 60px;
+          max-width: 90%;
+    }
+
+    #restaurants-list li {
+      max-width: none;
+      width: calc(25% - 95px);
+    }
+}
+@media only screen and (min-width: 1120px)and (max-width: 1276px)
 {
     #restaurants-list {
         /* display: flex; */
