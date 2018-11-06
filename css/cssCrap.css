@@ -146,3 +146,7 @@ margin: auto;
         /* align-items: center; */
       }
 }
+/* modified below */
+@media only screen and (min-width: 601px) and (max-width: 1301px) {
+  width: 100%;
+}
