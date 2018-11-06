@@ -151,7 +151,10 @@ flex-grow:2;
   /* flex-direction: row; */
   flex-direction: column;
   /* flex-wrap: wrap; */
-  align-items: center;
+  /* align-items: center; */
+  /* BELOW TO MAKE REVIEWS HEADING AT START */
+  align-items: flex-start;
+
   margin:auto;
   }
   .inside #footer {
