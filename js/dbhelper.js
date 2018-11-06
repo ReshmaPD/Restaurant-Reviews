@@ -176,16 +176,20 @@ class DBHelper {
    * what image to download.
    */
   static imageSizesForRestaurant(restaurant) {
-    return `(max-width: 360px) 280px,
+
+    let sizes =`(max-width: 360px) 280px,
             (max-width: 600px) 600px,
-            400px`;
+            (max-width: 876px) 450px,
+
+            330px`;
+    return sizes;
   }
  /**
    * Restaurant image ALT. MOD GO
    */
-  static imageAltForRestaurant(restaurant) {
-    return (`${restaurant.name}`);      //Added Attribute
-  }
+  // static imageAltForRestaurant(restaurant) {
+  //   return (`${restaurant.name}`);      //Added Attribute
+  // }
   /**
    * Map marker for a restaurant.
    */
