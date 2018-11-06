@@ -150,3 +150,12 @@ margin: auto;
 @media only screen and (min-width: 601px) and (max-width: 1301px) {
   width: 100%;
 }
+@media only screen and (min-width: 1240px)
+{
+
+   .leaflet-bottom {
+    /* margin-bottom:4em;
+     */
+     top:0;
+  }
+}
