@@ -35,6 +35,11 @@
   /* .leaflet-bottom {
     margin-bottom:4em;
   } */
+  .leaflet-bottom {
+    /* margin-bottom:4em;
+     */
+     top:0;
+  }
 }
 
 @media only screen and (max-width: 459px)
@@ -73,14 +78,5 @@ label {
   width: 200px;
 }
 
-}
-@media only screen and (min-width: 1240px)
-{
-
-   .leaflet-bottom {
-    /* margin-bottom:4em;
-     */
-     top:0;
-  }
 }
 
