@@ -89,13 +89,14 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
+  image.alt = `Picture of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   //MODE ME
   image.srcset = DBHelper.imageSrcsetForRestaurant(restaurant);
   image.sizes = DBHelper.imageSizesForRestaurant(restaurant);
-  image.alt = DBHelper.imageAltForRestaurant(restaurant); //MOD GO adding attribute as per semantics
+  //image.alt = DBHelper.imageAltForRestaurant(restaurant); //MOD GO adding attribute as per semantics
   // image.alt = restaurant.name; MOD MCMR
-  // image.setAttribute('alt', 'An image of ' + restaurant.name); CG
+  //image.setAttribute('alt', 'An image of ' + restaurant.name); CG
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
