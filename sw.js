@@ -23,6 +23,7 @@ self.addEventListener('install', function (event) {
                 '/js/secret.js',
                 '/js/main.js',
                 '/js/restaurant_info.js',
+                '/img/Offline.jpg',
                 'data/restaurants.json'
             ]);
         })
@@ -70,9 +71,18 @@ self.addEventListener('fetch', function (event) {
 
     // Default behavior: respond with cached elements, if any, falling back to network.
     event.respondWith(
-        caches.match(event.request).then(function (response) {
-            return response || fetch(event.request);
-        })
+        caches.match(event.request,{ignoreSearch:true}).then(function(resp) {
+            return resp || fetch(event.request).then(function(response) {
+              let responseClone = response.clone();
+              caches.open(appName + "-v1.0").then(function(cache) {
+                cache.put(event.request, responseClone);
+              });
+
+              return response;
+            });
+          }).catch(function() {
+            return caches.match('/img/Offline.jpg');
+          })
     );
 
 });
