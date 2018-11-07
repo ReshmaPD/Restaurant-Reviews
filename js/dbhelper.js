@@ -146,61 +146,51 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
+
+
   /**
-   * Restaurant image URL.MOD ME
-  //  */
-  // static imageUrlForRestaurant(restaurant) {
-  //   return (`/img/${restaurant.photograph}`);
-  // }
-   /**
    * Restaurant image URL. It defaults to a medium sized image. It uses restaurant.photograph
    * and fallbacks to restaurant.id if former is missing
+   * reference-https://github.com/AlexandroPerez/mws-walkthrough
    */
   static imageUrlForRestaurant(restaurant) {
     let url = `/img/${(restaurant.photograph.split('.')[0]||restaurant.id)}-medium.jpg`;
     return url;
   }
-   /**
-   * Restaurant srcset attribute for browser to decide best resolution. It uses restaurant.photograph
-   * and fallbacks to restaurant.id if former is missing.
+  /**
+   * TODO: srcset info sizes info to image for reponsive images.
    */
   static imageSrcsetForRestaurant(restaurant) {
     const imageSrc = `/img/${(restaurant.photograph.split('.')[0]||restaurant.id)}`;
-    return `${imageSrc}-small.jpg 300w,
-            ${imageSrc}-medium.jpg 600w,
-            ${imageSrc}-large.jpg 800w`;
+    let srcset = `${imageSrc}-small.jpg 300w,
+                  ${imageSrc}-medium.jpg 600w,
+                  ${imageSrc}-large.jpg 800w`;
+    return srcset;
   }
 
   /**
-   * Restaurant sizes attribute so browser knows image sizes before deciding
-   * what image to download.
+   * TODO: srcset info sizes info to image for reponsive images.
    */
   static imageSizesForRestaurant(restaurant) {
 
-    let sizes =`(max-width: 360px) 280px,
+    let sizes = `(max-width: 360px) 280px,
             (max-width: 600px) 600px,
             (max-width: 876px) 450px,
-
             330px`;
     return sizes;
   }
- /**
-   * Restaurant image ALT. MOD GO
-   */
-  // static imageAltForRestaurant(restaurant) {
-  //   return (`${restaurant.name}`);      //Added Attribute
-  // }
+
   /**
    * Map marker for a restaurant.
    */
-   static mapMarkerForRestaurant(restaurant, map) {
+  static mapMarkerForRestaurant(restaurant, map) {
     // https://leafletjs.com/reference-1.3.0.html#marker
-    const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng],
-      {title: restaurant.name,
+    const marker = new L.marker([restaurant.latlng.lat, restaurant.latlng.lng], {
+      title: restaurant.name,
       alt: restaurant.name,
       url: DBHelper.urlForRestaurant(restaurant)
-      })
-      marker.addTo(newMap);
+    })
+    marker.addTo(newMap);
     return marker;
   }
   /* static mapMarkerForRestaurant(restaurant, map) {
@@ -215,4 +205,3 @@ class DBHelper {
   } */
 
 }
-
