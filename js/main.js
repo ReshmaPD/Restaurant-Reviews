@@ -4,12 +4,13 @@ let restaurants,
 var newMap
 var markers = []
 
-//MY VERSION
-// Register service worker
+/**
+ *  Register service worker
+ */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
+  navigator.serviceWorker.register('/sw.js').then(function (reg) {
     console.log('ServiceWorker registration successful');
-  }).catch(function(err) {
+  }).catch(function (err) {
     console.log('ServiceWorker registration failed', err);
   });
 }
@@ -82,12 +83,11 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    // mapboxToken: 'pk.eyJ1IjoicmF2ZW5iIiwiYSI6ImNqbnZkMHRpeTE5eDYzcXBqbDhwNXF5Z20ifQ.QumZTPDgwPABAZJxU_G_5Q',
     mapboxToken: SECRET.mapbox_key,
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -164,18 +164,18 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 
 /**
  * Create restaurant HTML.
+ * TODO: append alternate name & srcset info sizes info to image for web accesibility and reponsive images
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+
   image.alt = `Picture of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  //MODE ME
   image.srcset = DBHelper.imageSrcsetForRestaurant(restaurant);
   image.sizes = DBHelper.imageSizesForRestaurant(restaurant);
-  //image.alt = restaurant.alt;//MOD GO
   li.append(image);
 
   const name = document.createElement('h1');
@@ -192,6 +192,9 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  /**
+   * TODO: append aria label and tab index focus for screen reader for web accesibility
+   */
   more.setAttribute('aria-label', `View details about ${restaurant.name}`);
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.tabIndex = '0';
@@ -208,6 +211,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
+
     function onClick() {
       window.location.href = marker.options.url;
     }
@@ -225,4 +229,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-

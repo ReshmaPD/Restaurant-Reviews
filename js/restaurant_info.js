@@ -22,7 +22,6 @@ initMap = () => {
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        // mapboxToken: 'pk.eyJ1IjoicmF2ZW5iIiwiYSI6ImNqbnZkMHRpeTE5eDYzcXBqbDhwNXF5Z20ifQ.QumZTPDgwPABAZJxU_G_5Q',
         mapboxToken: SECRET.mapbox_key,
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -79,6 +78,7 @@ fetchRestaurantFromURL = (callback) => {
 
 /**
  * Create restaurant HTML and add it to the webpage
+ * TODO: append alternate name & srcset info sizes info to image for web accesibility and reponsive images
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
@@ -91,12 +91,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img'
   image.alt = `Picture of ${restaurant.name}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  //MODE ME
   image.srcset = DBHelper.imageSrcsetForRestaurant(restaurant);
   image.sizes = DBHelper.imageSizesForRestaurant(restaurant);
-  //image.alt = DBHelper.imageAltForRestaurant(restaurant); //MOD GO adding attribute as per semantics
-  // image.alt = restaurant.name; MOD MCMR
-  //image.setAttribute('alt', 'An image of ' + restaurant.name); CG
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -177,12 +173,13 @@ createReviewHTML = (review) => {
 
 /**
  * Add restaurant name to the breadcrumb navigation menu
+ * TODO: append aria label for web accesibility
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
-  li.setAttribute('aria-current','page');//MOD MC
+  li.setAttribute('aria-current', 'page');
   breadcrumb.appendChild(li);
 }
 
