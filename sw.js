@@ -24,6 +24,7 @@ self.addEventListener('install', function (event) {
                 '/js/main.js',
                 '/js/restaurant_info.js',
                 '/img/Offline.jpg',
+                '/favicon.ico',
                 'data/restaurants.json'
             ]);
         })
