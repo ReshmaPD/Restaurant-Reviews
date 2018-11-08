@@ -13,7 +13,7 @@
 
 ## About the Application
 
-A **Restaurant Reviews** web application about your neighbourhood restaurants, which is designed as per web accesibility standards and also to be responsive on different sized displays and accessible for screen reader use.The added functionalty of service worker creates a seamless offline experience for the users
+A **Restaurant Reviews** web application about your neighbourhood restaurants, which is designed as per web accesibility standards and also to be responsive on different sized displays and accessible for screen reader use.The added functionality of service worker creates a seamless offline experience for the users
 
 
 ## Application-dependencies
@@ -56,7 +56,7 @@ A **Restaurant Reviews** web application about your neighbourhood restaurants, w
     * Semantic HTML
 
 
-### 3. The application has functionalty of service worker creates a seamless offline experience for the users implemented using
+### 3. The application has functionality of service worker creates a seamless offline experience for the users implemented using
 
     * Caching api techniques of the service worker
     * Caching lets the user see the visted content even when they choose to go offline
