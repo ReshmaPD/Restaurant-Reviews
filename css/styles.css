@@ -44,12 +44,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   background-color: rgb(156, 72, 72);
   padding: 5px 10px;
   z-index:1001;
-
 }
 
 .skip-link:focus {
   top:2em;
-  /* left: 15px; */
 }
 
 
@@ -76,7 +74,6 @@ nav {
   /* pallete below */
   /* background-color: #000712; */
   text-align:center;
-  /* flex it */
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -141,12 +138,8 @@ nav h1 a {
   /* background-color: #00213a; */
   /* background-color:#005100; */
   /* background-color:#4776b9; */
-
-
   background-color:rgb(189, 52, 52);
-
   align-items: center;
-  /* flex it */
   display: flex;
   flex-direction: row;
    flex-wrap: nowrap;
@@ -159,10 +152,6 @@ nav h1 a {
   line-height: 1;
   margin: 0 20px;
 }
-/* MR
-label {
-  visibility: hidden;
-} */
 
 .filter-options select {
   background-color: white;
@@ -175,7 +164,7 @@ label {
   padding: 0 10px;
   width: 200px;
 }
-/* MC */
+
 .filter-options select:focus {
   border: 4px solid rgb(33, 104, 151);
 }
@@ -186,7 +175,6 @@ label {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-  /* flex row wrap jusify center */
   display: flex;
 flex-direction: row;
 flex-wrap: wrap;
@@ -202,12 +190,8 @@ justify-content:flex-start;
   padding: 0 30px 25px;
   text-align: left;
   min-width: 270px;
-  /* width: 270px; */
-  /* flex: auto; */
-  /* ADDED BY GUT ME */
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
 }
 #restaurants-list li a:hover{
   background-color:rgb(189, 52, 52);
@@ -260,20 +244,14 @@ justify-content:flex-start;
   top: 0;
   width: 100%;
   z-index: 1000;
-  /* display: flex;
-  flex-flow: row wrap; */
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  /* height: 87%; */
   position: fixed;
   right: 0;
   top: 80px;
   width: 50%;
   z-index:999;
-  /* display: flex; */
-  /* flex-flow: row wrap; */
-  /* height: 80%; */
   height: 87%;
 
 
@@ -285,10 +263,6 @@ justify-content:flex-start;
 }
 .inside #footer {
   bottom: 0;
-  /* position: absolute; */
-  /* width: 50%; */
-  /* width: 45%; */
-  /* width: 100%; */
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -303,10 +277,6 @@ justify-content:flex-start;
   margin: 15px 0 30px;
   text-transform: uppercase;
   line-height: 1.1;
-  /* MR
-  line-height: 1.1;
-  border-radius: 5px;
-  height: 30px; */
 }
 #restaurant-img {
 	width: 90%;
@@ -330,34 +300,20 @@ justify-content:flex-start;
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  /* padding: 140px 40px 30px; */
-  /* width: 50%; */
-  /* width: 75%; */
-  /* width: 45%; */
-
-  /* width: 100%; */
-
-
 }
-/* Original css */
+
 #reviews-container {
-  /* padding: 30px 40px 80px; */
   padding: 30px 30px 80px 30px;
   width:45%;
-
 }
-#restaurant-container {
-  /* padding: 140px 0 40px 0; */
-  /* padding: 140px 40px 30px; */
+/* #restaurant-container {
   padding: 140px 30px 30px 30px;
-  /* width: 50%; */
   width: 45%;
-
-
-
-}
-/* MR */
+} */
 #restaurant-container {
+  /* MOD 8TH NOV */
+  padding: 140px 30px 30px 30px;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -370,33 +326,27 @@ justify-content:flex-start;
 }
 #reviews-list {
   margin: 0;
-  /* padding: 0; */
   padding: 0 30px 0 0;
 
 }
 #reviews-list li {
   background-color: #fff;
     border: 2px solid #f3f3f3;
-  display: block;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
   width: 85%;
-  /* MR */
-  /* border-radius: 20px 0px 20px 0px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-/* #reviews-list li p {
-  margin: 0 0 10px;
-} */
+
 #reviews-list li>p:nth-child(1) {
   width: 50%;
   align-self: center;
-  color: orange;
+  color: rgb(255, 182, 45);
 }
 
 #reviews-list li>p:nth-child(2) {
