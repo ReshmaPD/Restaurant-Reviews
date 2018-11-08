@@ -11,53 +11,22 @@
     /* overflow-x: hidden; */
     /* width:100vw; */
 }
-/* .outside #restaurant-content {
-    flex: 2 1 auto;
-    align-content: space-around;
-} */
+
 .inside {
     display: flex;
-    /* flex-direction: row; */
     flex-direction: column;
-    /* justify-content:space-around; */
 /* mod 1 */
     width: 100vw;
-    /* position: relative; */
-    /* flex-wrap: wrap; */
-    /* align-items: flex-start; */
     /* align-items:center; EDITED FOR FOOTER IT LEAVES GAP */
     justify-content: flex-start;
     /* BELOW IS ADDED TO HIDE HORIZONTAL SCROLL  */
     /* overflow-x: hidden; */
 
 }
-#restaurant-container,
-#reviews-container{
-    width: 100%;
-}
-/* #reviews-container {
-    width: 100%;
-} */
-#reviews-list li {
-    width:75%;
-}
-/* #restaurants-list {
-    width:100%;
-} */
-/* .inside #maincontent {
-    order: 0;
-    margin: auto;
-    width: 100vw;
-} */
-/* ====================== Main====================== */
-/* DONT FLEX MAIN CONTENT */
-/* #maincontent {
-    display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-      min-height: 100%;
-  } */
+
+
+/* ====================== inside body====================== */
+
 .inside header{
     order: 0;
     /* mod 2 */
@@ -65,19 +34,10 @@
     /* width:100%; */
 
 }
-#breadcrumb li {
-    font-size: 10pt;
-}
 
- /* .inside #maincontent { */
-     /* min-width: 0; */
-     /* padding: 0; */
-    /* width: 100vw; */
-/* } */
+
  .inside #map-container {
     order: 1;
-    /* order: 2; */
-    /* flex-flow: column wrap; */
     top: 130px;
     position: relative;
     height: 400px;
@@ -85,50 +45,51 @@
     width: 100vw;
     /* width: 100%; */
 }
-/* .inside #restaurant-container,
-#reviews-list {
-width: 100vw; */
 
- /* flex-basis: 75%; */
-/* } */
 .inside #restaurant-container {
     order: 2;
     /* Mod 4 */
     width: 100vw;
-    /* flex-basis:100%; */
     flex-grow: 1;
 }
 .inside #reviews-container {
     order:3;
     /* mod 5 */
     width: 100vw;
-    /* flex-basis:100%; */
     flex-grow: 1;
 }
-#reviews-container {
-    padding: 30px 40px 80px;
-  }
-  #restaurant-container {
-    padding: 140px 0 40px 0;
-  }
+.inside #footer {
+    order:4;
+    align-self: center;
+    bottom:0;
+   position: absolute;
+   /* mod 6 */
+   width: 100vw;
+   /* width: 100%; */
+}
+/* ====================== end inside body====================== */
+
+/* ====================== Inside Main============================ */
+
+#restaurant-container,
+#reviews-container{
+    width: 100%;
+}
+
+#reviews-list li {
+    width:75%;
+}
+
  #restaurant-container{
+    padding: 140px 0 40px 0;
     display: flex;
-    /* flex-direction: row; */
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    /* align-items: flex-start; */
     justify-content:center;
-    /* justify-content:space-around; */
-
-    /* padding: 140px 0 0 30px; */
     margin: auto;
   }
-  /* #restaurant-container #restaurant-name,
-  #restaurant-img,
-  #restaurant-cuisine {
-      align-self: center;
-  } */
+
   #restaurant-container #restaurant-hours,
   #restaurant-address{
       align-self: flex-start;
@@ -137,65 +98,21 @@ width: 100vw; */
   #restaurant-address {
       padding-left:28px;
   }
-  /* #restaurant-container #restaurant-name,
-  #restaurant-img,
-  #restaurant-cuisine,
-  #restaurant-address,
-  #restaurant-hours{
-flex-basis:100%;
-flex-grow:2;
-  } */
 
-  /* #restaurant-hours {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
-      justify-content: flex-start;
-  } */
   #reviews-container {
   display: flex;
-  /* flex-direction: row; */
   flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* align-items: center; */
   /* BELOW TO MAKE REVIEWS HEADING AT START */
   /* align-items: flex-start; */
   align-items:center;
-  /* margin:auto; */
-  }
-  .inside #footer {
-      order:4;
-      align-self: center;
-      bottom:0;
-     position: absolute;
-     /* flex-basis:100% ; */
-     /* mod 6 */
-     width: 100vw;
-     /* width: 100%; */
-     /* flex: 2 0 100%; */
-     /* flex:0 1 87%; */
-     /* flex:0 1 auto; */
-  }
-  #footer {
-      /* mod 7 */
-      padding-left:0;
-      padding-right: 0;
-      /* width:100%; */
+  /* mod 8 IMP CHROME BUG */
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
   }
 
-  #restaurants-list {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 30px 15px 40px 30px;
-		/* max-width: 90%; */
-        /* padding: 0; */
-        margin: auto;
-  }
-  /* #restaurants-list li {
-    flex:2 1 auto;
-  } */
+
+
   #reviews-list {
       display: flex;
       flex-flow: column;
@@ -204,18 +121,11 @@ flex-grow:2;
        margin:20px;
   }
 
-  /* mod 8 IMP CHROME BUG */
-#reviews-container{
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-right: 0px;
-}
 
-/* ====================== Header ====================== */
-/* nav {
-display:flex;
-justify-content:center;
-} */
+/* ======================End Inside Main============================ */
+
+/* ====================== Header Inside ====================== */
+
  header{
     display: flex;
     flex-direction: column;
@@ -233,20 +143,26 @@ header #breadcrumb {
     display: flex;
     padding-left: 0;
     padding-right: 0;
-    /* flex-direction: column; */
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
 }
-/* ====================== Section====================== */
-/* ====================== Outside====================== */
-/* .filter-options {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-     main goes
-} */
+#breadcrumb li {
+    font-size: 10pt;
+}
+/* ====================== end Header Inside ====================== */
+
+/* ====================== Footer====================== */
+#footer {
+    /* mod 7 */
+    padding-left:0;
+    padding-right: 0;
+    /* width:100%; */
+}
+/* ====================== end footer====================== */
+
+/* ====================== Outside Main====================== */
+
 
 #restaurants-list {
 padding: 30px 15px;
@@ -257,18 +173,8 @@ justify-content: space-around;
 align-items: center;
 
 }
-/* ====================== End Outside====================== */
+/* ====================== End Outside Main====================== */
 
-/* ====================== Inside============================ */
-/* .leaflet-control-zoom.leaflet-bar.leaflet-control {
-    margin-top: 3rem;
-  } */
-
-/* ====================== End Inside======================== */
-
-
-
-/* ====================== End Section====================== */
 
 
 
