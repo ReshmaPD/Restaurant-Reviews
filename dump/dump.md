@@ -76,3 +76,17 @@ style.css-
 padding: 140px 30px 30px 30px;
 width: 45%;
 } _/
+
+
+
+
+//service worker
+/** At Service Worker Install time, cache all static assets */
+ // Default behavior: respond with cached elements, if any, falling back to network.
+ // Since requests made to restaurant.html have search params (like ?id=1), the url can't be used as the
+        // key to access the cache, so just respondWith restaurant.html if pathname startsWith '/restaurant.html'
+            // if image is in cache, return it, else fetch from network, cache a clone, then return network response
+
+    // Make a new URL with a stripped suffix and extension from the request url
+    // i.e. /img/1-medium.jpg  will become  /img/1
+    // we'll use this as the KEY for storing image into cache
