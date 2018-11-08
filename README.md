@@ -86,8 +86,6 @@ A **Restaurant Reviews** web application about your neighbourhood restaurants, w
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#The_premise_of_service_workers)
 * [Offline Cookbook](https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/)
 * [Cache Images](https://classroom.udacity.com/courses/ud899/lessons/6381510082/concepts/63774101810923)
-* [Storing api key](https://github.com/AlexandroPerez/mws-walkthrough)
-
 
 ## Technologies
 
