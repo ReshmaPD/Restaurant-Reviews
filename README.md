@@ -2,6 +2,8 @@
 
 [Live Website](https://reshma-restaurant-reviews.netlify.com)
 
+**[Starter Code](https://github.com/udacity/mws-restaurant-stage-1) The starter code from Udacity was provided.Goal was convert a static webpage design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use and also add a service worker to begin the process of creating a seamless offline experience for our users.**
+
 ## Table of Contents
 * [About the Application](#about-the-application)
 * [Application dependencies](#application-dependencies)
